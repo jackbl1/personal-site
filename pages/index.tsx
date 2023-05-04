@@ -10,20 +10,20 @@ import Articles from '../components/articles';
 
 type Props = {
   projects: Project[];
-  articles: Post[];
+  posts: Post[];
 };
 
-export default function Index({ projects, articles }: Props) {
+export default function Index({ projects, posts }: Props) {
   return (
     <>
-      <Layout>
+      <Layout posts={posts}>
         <Head>
           <title>jbloomfeld.xyz</title>
         </Head>
         <Container>
           <Intro />
           <Projects projects={projects} />
-          <Articles posts={articles} />
+          <Articles posts={posts} />
         </Container>
       </Layout>
     </>
@@ -66,7 +66,7 @@ export const getStaticProps = async () => {
       content: '',
     },
   ];
-  const articles = getAllPosts([
+  const posts = getAllPosts([
     'title',
     'date',
     'slug',
@@ -76,6 +76,6 @@ export const getStaticProps = async () => {
   ]);
 
   return {
-    props: { projects, articles },
+    props: { projects, posts },
   };
 };

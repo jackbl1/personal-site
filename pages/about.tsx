@@ -2,18 +2,24 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Layout from '../components/layout';
+import { getAllPosts } from '../lib/api';
+import Post from '../interfaces/post';
 
-export default function About() {
+type Props = {
+  posts: Post[];
+};
+
+export default function About({ posts }: Props) {
   const router = useRouter();
   return (
-    <Layout>
+    <Layout posts={posts}>
       <Head>
         <title>jbloomfeld.xyz</title>
       </Head>
 
       <div className='2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4'>
         <div className='flex flex-col lg:flex-row justify-between gap-8'>
-          <div className='w-full lg:w-5/12 flex flex-col justify-center'>
+          <div className='w-full lg:w-5/12 flex flex-col justify-center content-center items-center'>
             <h1 className='text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-4'>
               Jack Bloomfeld
             </h1>
@@ -33,22 +39,18 @@ export default function About() {
             </p>
           </div>
           <div className='w-full lg:w-8/12'>
-            {/* <img
-              className="w-full h-full"
-              src="https://i.ibb.co/FhgPJt8/Rectangle-116.png"
-              alt="A group of People"
-            /> */}
-
-            <img
-              className='w-full h-full'
+            <Image
+              className='shadow-lg rounded-lg content-center items-center'
               src={`${router.basePath}${'/assets/images/demo-pic.png'}`}
-              alt={`picture of software demo`}
+              alt='picture of software demo'
+              width='750'
+              height='400'
             />
           </div>
         </div>
 
         <div className='flex lg:flex-row flex-col justify-between gap-8 pt-12'>
-          <div className='w-full flex flex-col justify-center'>
+          <div className='w-full flex flex-col justify-center content-center items-center'>
             <h1 className='text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-4'>
               Please reach out!
             </h1>
@@ -57,66 +59,23 @@ export default function About() {
               hobbies, or anything else.
             </p>
           </div>
-          <div className='w-full lg:pt-8'>
-            <div className='grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-4 shadow-lg rounded-md'>
-              <div className='p-4 pb-6 flex flex-col'>
-                <a href='https://twitter.com/0xJub11'>
-                  <Image
-                    className='md:block hidden'
-                    src={`${router.basePath}${'/assets/images/twitter.png'}`}
-                    alt='twitter logo'
-                    width='25'
-                    height='25'
-                  />
-                  <Image
-                    className='md:hidden block'
-                    src={`${router.basePath}${'/assets/images/twitter.png'}`}
-                    alt='twitter logo'
-                    width='25'
-                    height='25'
-                  />
-                </a>
-              </div>
-              <div className='p-4 pb-6 flex flex-col'>
-                <a href='https://medium.com/@jackbloomfeld1'>
-                  <Image
-                    className='md:block hidden'
-                    src={`${router.basePath}${'/assets/images/medium.png'}`}
-                    alt='medium logo'
-                    width='25'
-                    height='25'
-                  />
-                  <Image
-                    className='md:hidden block'
-                    src={`${router.basePath}${'/assets/images/medium.png'}`}
-                    alt='medium logo'
-                    width='25'
-                    height='25'
-                  />
-                </a>
-              </div>
-              <div className='p-4 pb-6 flex flex-col'>
-                <a href='https://www.linkedin.com/in/jack-bloomfeld-90357b112/'>
-                  <Image
-                    className='md:block hidden'
-                    src={`${router.basePath}${'/assets/images/linkedin.png'}`}
-                    alt='linkedin logo'
-                    width='25'
-                    height='25'
-                  />
-                  <Image
-                    className='md:hidden block'
-                    src={`${router.basePath}${'/assets/images/linkedin.png'}`}
-                    alt='linkedin logo'
-                    width='25'
-                    height='25'
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </Layout>
   );
 }
+
+export const getStaticProps = async () => {
+  const posts = getAllPosts([
+    'title',
+    'date',
+    'slug',
+    'author',
+    'coverImage',
+    'excerpt',
+  ]);
+
+  return {
+    props: { posts },
+  };
+};
