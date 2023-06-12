@@ -30,12 +30,18 @@ export default function Post({ post, posts, preview }: Props) {
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <article className='mb-32'>
+            <article>
               <Head>
                 <title>{post.title}</title>
               </Head>
+              <br />
               <PostHeader title={post.title} date={post.date} />
               <PostBody content={post.content} />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
             </article>
           </>
         )}

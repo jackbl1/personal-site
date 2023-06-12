@@ -28,6 +28,8 @@ export default function About({ posts }: Props) {
               <a
                 className='text-blue-700'
                 href='https://www.buildingbeauty.org/beautiful-software'
+                target='_blank'
+                rel='noreferrer'
               >
                 beautiful software.
               </a>

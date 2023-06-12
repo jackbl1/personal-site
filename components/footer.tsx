@@ -12,7 +12,11 @@ const Footer = () => {
             Scroll back up, you missed the good part
           </span>
           <div className='flex space-x-4'>
-            <a href='https://twitter.com/0xJub11'>
+            <a
+              href='https://twitter.com/0xJub11'
+              target='_blank'
+              rel='noreferrer'
+            >
               <Image
                 src={`${router.basePath}/assets/images/twitter.png`}
                 alt='twitter logo'
@@ -20,7 +24,11 @@ const Footer = () => {
                 height='25'
               />
             </a>
-            <a href='https://medium.com/@jackbloomfeld1'>
+            <a
+              href='https://medium.com/@jackbloomfeld1'
+              target='_blank'
+              rel='noreferrer'
+            >
               <Image
                 src={`${router.basePath}/assets/images/medium.png`}
                 alt='medium logo'
@@ -28,7 +36,11 @@ const Footer = () => {
                 height='25'
               />
             </a>
-            <a href='https://www.linkedin.com/in/jack-bloomfeld-90357b112/'>
+            <a
+              href='https://www.linkedin.com/in/jack-bloomfeld-90357b112/'
+              target='_blank'
+              rel='noreferrer'
+            >
               <Image
                 src={`${router.basePath}/assets/images/linkedin.png`}
                 alt='linkedin logo'
@@ -36,7 +48,11 @@ const Footer = () => {
                 height='25'
               />
             </a>
-            <a href='https://github.com/jackbl1'>
+            <a
+              href='https://github.com/jackbl1'
+              target='_blank'
+              rel='noreferrer'
+            >
               <Image
                 src={`${router.basePath}/assets/images/github.png`}
                 alt='github logo'

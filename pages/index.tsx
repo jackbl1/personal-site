@@ -35,7 +35,7 @@ export const getStaticProps = async () => {
     {
       slug: '',
       title: 'Phoenix Studio',
-      link: 'https://www.phoenix.studio',
+      link: 'https://phoenixstudio.netlify.app/',
       date: '2022-12-01T12:35:07.322Z',
       coverImage: '/assets/projects/phoenix-studio/cover.png',
       excerpt:

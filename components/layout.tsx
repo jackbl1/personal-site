@@ -13,7 +13,7 @@ const Layout = ({ preview, children, posts }: Props) => {
   return (
     <>
       <Meta />
-      <div className="min-h-screen bg-repeat bg-[length:360px_240px] bg-[url('/assets/main-bg.png')]">
+      <div className="min-h-screen bg-repeat bg-[length:360px_240px] bg-[url('/assets/main-bg.webp')]">
         <Navbar posts={posts} />
         <main>{children}</main>
       </div>

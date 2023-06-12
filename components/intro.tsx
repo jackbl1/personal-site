@@ -1,6 +1,6 @@
 const Intro = () => {
   return (
-    <div className="relative overflow-hidden rounded-lg bg-[url('/assets/home-bg.png')] bg-cover bg-no-repeat p-12 mb-12">
+    <div className="relative overflow-hidden rounded-lg bg-[url('/assets/home-bg.webp')] bg-cover bg-no-repeat p-12 mb-12">
       <section className='flex-col md:flex-row flex items-center md:justify-between mt-16 mb-6 md:mb-6'>
         <h1 className='text-4xl md:text-6xl font-bold tracking-tighter leading-tight md:pr-8'>
           Welcome
