@@ -65,6 +65,17 @@ export const getStaticProps = async () => {
       ogImage: { url: '/assets/projects/auth-playground/cover.png' },
       content: '',
     },
+    {
+      slug: '',
+      title: "Children's Yoga with Ms. Christine",
+      link: 'https://www.yogawithmschristine.com/',
+      date: '2023-05-11T12:35:07.322Z',
+      coverImage: '/assets/projects/yoga/cover.png',
+      excerpt:
+        "Children's Yoga with Ms. Christine is a website for a children's yoga instructor. It is built with Next.js and Tailwind CSS",
+      ogImage: { url: '/assets/projects/yoga/cover.png' },
+      content: '',
+    },
   ];
   const posts = getAllPosts([
     'title',

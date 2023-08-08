@@ -34,10 +34,16 @@ export default function About({ posts }: Props) {
                 beautiful software.
               </a>
               <br />
-              <br /> I am currently working on web3 hobby projects and AI
-              alignment research. <br />
-              <br />I also frequently write blog posts, mostly about philosophy
-              and blockchain.
+              <br />
+              I am currently working on web3 hobby projects and AI alignment
+              research.
+              <br />
+              <br />
+              I also frequently write blog posts, mostly about philosophy and
+              blockchain.
+              <br />
+              <br />
+              Please reach out. I'm always happy to chat.
             </p>
           </div>
           <div className='w-full lg:w-8/12'>
@@ -48,18 +54,6 @@ export default function About({ posts }: Props) {
               width='750'
               height='400'
             />
-          </div>
-        </div>
-
-        <div className='flex lg:flex-row flex-col justify-between gap-8 pt-12'>
-          <div className='w-full flex flex-col justify-center content-center items-center'>
-            <h1 className='text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-4'>
-              Please reach out!
-            </h1>
-            <p className='font-normal text-base leading-6 text-gray-600  '>
-              I am always happy to chat about my projects, my interests, my
-              hobbies, or anything else.
-            </p>
           </div>
         </div>
       </div>
