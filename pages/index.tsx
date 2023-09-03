@@ -34,13 +34,13 @@ export const getStaticProps = async () => {
   const projects: Project[] = [
     {
       slug: '',
-      title: 'Phoenix Studio',
-      link: 'https://phoenixstudio.netlify.app/',
-      date: '2022-12-01T12:35:07.322Z',
-      coverImage: '/assets/projects/phoenix-studio/cover.png',
+      title: 'Auth Playground',
+      link: 'https://auth-playground-eight.vercel.app/',
+      date: '2023-04-28T12:35:07.322Z',
+      coverImage: '/assets/projects/auth-playground/cover.png',
       excerpt:
-        'Phoenix Studio offers musicians a new revenue stream by connecting fans directly to the artists they want to support.',
-      ogImage: { url: '/assets/projects/phoenix-studio/cover.png' },
+        'Auth Playground is a tool to explore different web3 authentication plug-ins for your dapp.',
+      ogImage: { url: '/assets/projects/auth-playground/cover.png' },
       content: '',
     },
     {
@@ -52,17 +52,6 @@ export const getStaticProps = async () => {
       excerpt:
         'Live Stoic is a collection of projects on the Solana blockchain promoting stoic philosophy.',
       ogImage: { url: '/assets/projects/live-stoic/cover.png' },
-      content: '',
-    },
-    {
-      slug: '',
-      title: 'Auth Playground',
-      link: 'https://auth-playground-eight.vercel.app/',
-      date: '2023-04-28T12:35:07.322Z',
-      coverImage: '/assets/projects/auth-playground/cover.png',
-      excerpt:
-        'Auth Playground is a tool to explore different web3 authentication plug-ins for your dapp.',
-      ogImage: { url: '/assets/projects/auth-playground/cover.png' },
       content: '',
     },
     {
