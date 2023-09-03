@@ -24,7 +24,7 @@ export default function About({ posts }: Props) {
               Jack Bloomfeld
             </h1>
             <p className='font-normal text-base leading-6 text-gray-600  '>
-              I am a software engineer with a passion for web3 and{' '}
+              I am a software engineer with a passion for web3, AI and{' '}
               <a
                 className='text-blue-700'
                 href='https://www.buildingbeauty.org/beautiful-software'
@@ -35,11 +35,7 @@ export default function About({ posts }: Props) {
               </a>
               <br />
               <br />
-              I am currently working on web3 hobby projects and AI alignment
-              research.
-              <br />
-              <br />
-              I also frequently write blog posts, mostly about philosophy and
+              I also frequently write blog posts about philosophy and
               blockchain.
               <br />
               <br />
